@@ -26,6 +26,7 @@ import javax.persistence.Version;
 
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
+import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 public class Professor implements Serializable {
@@ -33,7 +34,11 @@ public class Professor implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int professorId;
+
+	@NotBlank(message = "name can not be blank")
 	private String name;
+
+	@NotBlank(message = "deapartment can not be blank")
 	private String department;
 	@Enumerated(EnumType.ORDINAL)
 	private SkillLevel level;

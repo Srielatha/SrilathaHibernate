@@ -1,4 +1,4 @@
-package com.singleTable;
+package com.jnit.joined;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,9 +6,9 @@ import javax.persistence.Table;
 import javax.persistence.DiscriminatorValue;
 
 @Entity
-@Table(name = "FOUR_WHEELER")
+@Table(name = "FOUR_WHEEL")
 @DiscriminatorValue("Car")
-public class FourWheeler extends Vehicle {
+public class FourW extends Veh {
 	@Column(name = "STEERING_TYPE")
 	private String steeringFourWheeler;
 

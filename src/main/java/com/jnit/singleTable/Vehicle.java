@@ -1,7 +1,8 @@
-package com.singleTable;
+package com.jnit.singleTable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -12,6 +13,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "VEHICLE")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "")
 
 public class Vehicle {
 	@Id

@@ -11,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Version;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 @Entity
 public class Courses implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -19,6 +21,8 @@ public class Courses implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int courseId;
 	private int authorId;
+
+	@NotBlank(message = "courseName can not be blank")
 	private String courseName;
 
 	@ManyToOne

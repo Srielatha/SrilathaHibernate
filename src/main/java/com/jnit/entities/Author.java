@@ -26,6 +26,7 @@ import javax.persistence.Version;
 
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
+import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 public class Author implements Serializable {
@@ -33,14 +34,14 @@ public class Author implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int authorId;
+
+	@NotBlank(message = "firstName can not be blank")
 	private String firstName;
 	private String LastName;
 
 	@OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@OrderColumn
-	@Fetch(FetchMode.SELECT) // JOIN(one query to get both course and
-								// topic),SELECT(two queries to get course and
-								// topic)
+	@Fetch(FetchMode.SELECT)
 	private List<Courses> Courses;
 	private LocalDateTime createdDateTime;
 

@@ -36,13 +36,11 @@
 		<mapping class="com.jnit.entities.User" />
 		<mapping class="com.jnit.entities.Course" />
 		<mapping class="com.jnit.entities.Topic" />
-		<mapping class="com.jnit.entities.Topic" />
-		<mapping class="com.singleTable.Vehicle" />
-		<mapping class="com.singleTable.TwoWheeler" />
-		<mapping class="com.singleTable.FourWheeler" />
-
-
-
-
+		<mapping class="com.jnit.singleTable.Vehicle" />
+		<mapping class="com.jnit.singleTable.TwoWheeler" />
+		<mapping class="com.jnit.singleTable.FourWheeler" />
+		<mapping class="com.jnit.joined.Veh" />
+		<mapping class="com.jnit.joined.TwoW" />
+		<mapping class="com.jnit.joined.FourW" />
 	</session-factory>
 </hibernate-configuration>

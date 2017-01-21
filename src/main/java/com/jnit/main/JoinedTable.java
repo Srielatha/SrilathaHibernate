@@ -4,27 +4,27 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import com.jnit.config.HibernateUtil;
-import com.jnit.singleTable.FourWheeler;
-import com.jnit.singleTable.TwoWheeler;
-import com.jnit.singleTable.Vehicle;
+import com.jnit.joined.FourW;
+import com.jnit.joined.TwoW;
+import com.jnit.joined.Veh;
 
 /*
- * SingleTable 
+ * JoinedTable 
  */
-public class Singletable {
+public class JoinedTable {
 
 	public static void main(String[] args) {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
-		Vehicle vehicle = new Vehicle();
-		vehicle.setVehicleName("Car");
+		Veh vehicle = new Veh();
+		vehicle.setVehicleName("van");
 
-		TwoWheeler twoWheeler = new TwoWheeler();
-		twoWheeler.setVehicleName("Bike");
-		twoWheeler.setSteeringTwoWheeler("Bike Steering Handle");
+		TwoW twoWheeler = new TwoW();
+		twoWheeler.setVehicleName("bicycle");
+		twoWheeler.setSteeringTwoWheeler("bicycle Steering Handle");
 
-		FourWheeler fourWheeler = new FourWheeler();
+		FourW fourWheeler = new FourW();
 		fourWheeler.setVehicleName("Alto");
 		fourWheeler.setSteeringFourWheeler("Alto Steering Wheel");
 

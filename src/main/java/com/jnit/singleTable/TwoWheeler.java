@@ -1,4 +1,4 @@
-package com.singleTable;
+package com.jnit.singleTable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

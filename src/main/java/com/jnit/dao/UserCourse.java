@@ -27,7 +27,7 @@ public class UserCourse {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session = sessionFactory.openSession();
 		Transaction transaction = session.beginTransaction();
-		Course c1 = new Course("Java - I", "Appi", SkillLevel.BEGINNER, "Intro to java", null, new BigDecimal(0.0),
+		Course c1 = new Course("Java - I", "Mike", SkillLevel.BEGINNER, "Intro to java", null, new BigDecimal(0.0),
 				"gets understanding of java", "free");
 		List<User> users = new ArrayList<User>();
 		User user1 = new User("u.srilatha666@gmail.com", "siri", "usike", "R", "oct27",

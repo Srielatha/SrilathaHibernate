@@ -15,7 +15,6 @@ import com.jnit.entities.Course;
 import com.jnit.entities.SkillLevel;
 import com.jnit.entities.Topic;
 import com.jnit.entities.User;
-
 import com.jnit.config.HibernateUtil;
 
 /*
